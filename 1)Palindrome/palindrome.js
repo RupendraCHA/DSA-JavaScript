@@ -24,5 +24,13 @@ const isPalindrome =  (number) => {
     console.log(isEqual)
 }
 
+// Another Way
+const isPalindrome1 = (x) => {
+    return x < 0 ? false : x === +x.toString().split("").reverse().join("")
+}
+const isTrue = isPalindrome1(121)
+console.log(isTrue)
+
 isPalindrome(121)
+
 isPalindrome(10)
