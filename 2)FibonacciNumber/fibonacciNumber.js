@@ -25,3 +25,16 @@ const findFibonacciSeriesNumber = (n) => {
 
 const result = findFibonacciSeriesNumber(10)
 console.log(result)
+
+// Finding fibonacci using recursion 
+
+const fibonacci2 = (n) => {
+    if (n <= 1)  return n
+
+    return fibonacci2(n-1) + fibonacci2(n-2)
+
+}
+
+// const fib = (n) => (n <= 1 ? n : fib(n-1) + fib(n-2))
+
+console.log(fibonacci2(5))
