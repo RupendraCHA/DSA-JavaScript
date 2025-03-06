@@ -23,6 +23,28 @@ const findAnagramOrNot = (s, t) => {
     console.log(isAnagramWord)
 }
 
-findAnagramOrNot("anagram", "nagaram")
-findAnagramOrNot("rat", "cat")
-findAnagramOrNot("moonnoon", "noonmoon")
+// findAnagramOrNot("anagram", "nagaram")
+// findAnagramOrNot("rat", "cat")
+// findAnagramOrNot("moonnoon", "noonmoon")
+
+// Second Approach
+
+const anagram2 = (s, t) => {
+    if (s.length !== t.length) return false
+
+    let obj1 = {}
+    let obj2 = {}
+
+    for (let i = 0; i < s.length; i++){
+        obj1[s[i]] = (obj1[s[i]] || 0) +  1
+        obj2[s[i]] = (obj2[s[i]] || 0) +  1
+    }
+
+    for (const key in obj1){
+        
+        if (obj1[key] !== obj2[key]) return false
+    }
+
+    return true
+}
+console.log(anagram2("anagram", "nagaram"))
